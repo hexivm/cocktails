@@ -1,0 +1,24 @@
+{
+"name": "coktail100"
+, "description" : "coktail100"
+, "author" : "Admin"
+, "origen" : "Spain"
+, "alcohol" : true
+, "ingredients" : 
+[ 
+{"name" : "ing1", "quantity" : 1} 
+, {"name" : "ing2", "quantity" : 1}
+, {"name" : "ing3", "quantity" : 3} 
+]
+, "steps" : [
+{"step": "step1", "time": 1, "order": 1}
+, {"step": "step2", "time": 1, "order": 2}
+]
+, "comments" : [
+{"author": "user1", "comment": "good", "rate": 4}
+,{"author": "user2", "comment": "very good", "rate": 5}
+,{"author": "user3", "comment": "good", "rate": 3}
+]
+
+}
+  

@@ -1,0 +1,24 @@
+{
+"name": "coktail200"
+, "description" : "coktail200"
+, "author" : "Admin"
+, "origen" : "France"
+, "alcohol" : true
+, "ingredients" : 
+[ 
+{"name" : "ing1", "quantity" : 5} 
+, {"name" : "ing2", "quantity" : 1}
+, {"name" : "ing4", "quantity" : 3} 
+]
+, "steps" : [
+{"step": "step1", "time": 5, "order": 1}
+, {"step": "step2", "time": 1, "order": 2}
+]
+, "comments" : [
+{"author": "user1", "comment": "normal", "rate": 3}
+,{"author": "user6", "comment": "normal", "rate": 3}
+,{"author": "user11", "comment": "bad", "rate": 1}
+]
+
+}
+  

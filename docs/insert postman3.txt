@@ -1,0 +1,28 @@
+{
+"name": "coktail300"
+, "description" : "coktail300"
+, "author" : "Admin"
+, "origen" : "UK"
+, "alcohol" : true
+, "ingredients" : 
+[ 
+{"name" : "ing5", "quantity" : 3} 
+, {"name" : "ing7", "quantity" : 3}
+, {"name" : "ing1", "quantity" : 1} 
+]
+, "steps" : [
+{"step": "step1", "time": 5, "order": 1}
+, {"step": "step2", "time": 1, "order": 2}
+, {"step": "step3", "time": 2, "order": 3}
+, {"step": "step4", "time": 2, "order": 4}
+, {"step": "step5", "time": 1, "order": 5}
+]
+, "comments" : [
+{"author": "user8", "comment": "fantastic", "rate": 5}
+,{"author": "user1", "comment": "awesome", "rate": 5}
+,{"author": "user6", "comment": "very good", "rate": 4}
+,{"author": "anonymous", "comment": "the best", "rate": 5}
+]
+
+}
+  
