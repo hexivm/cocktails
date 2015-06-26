@@ -10,7 +10,8 @@ var BookSchema = new Schema({
   author: String,
   language: String,
   theme: String,
-  edition: String,  
+  edition: String, 
+  year: String 
 });
 
 mongoose.model('Book', BookSchema);
