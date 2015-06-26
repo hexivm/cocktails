@@ -1,9 +1,9 @@
 app.controller("appController", function appController($scope,$http){
 	// Get the list of available books 
-	$http.get('/books').success(function(data) {
-		$scope.books = data;
-		console.log('books: ' + data);
+	$http.get('/cocktails').success(function(data) {
+		$scope.cocktails = data;
+		console.log('cocktails: ' + data);
 	}).error(function(error){
-		console.log('error fetching books: ' + error);
+		console.log('error fetching cocktails: ' + error);
 	});
 });

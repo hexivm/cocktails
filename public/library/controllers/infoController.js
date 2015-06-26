@@ -1,8 +1,8 @@
-// Route params is to identificate the segments of the url, in this case, to recognize the book
+// Route params is to identificate the segments of the url, in this case, to recognize the cocktail
 app.controller("infoController", function infoController($scope,$routeParams){
-	angular.forEach($scope.books, function(book, key){
-		if (book._id == $routeParams.id){
-			$scope.book = book;
+	angular.forEach($scope.cocktails, function(cocktail, key){
+		if (cocktail._id == $routeParams.id){
+			$scope.cocktail = cocktail;
 		}
 	});
 });

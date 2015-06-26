@@ -1,16 +1,16 @@
 app.controller("editController", function editController($scope,$routeParams,$location,$http){
-	// Get the book to edit with route params
-	angular.forEach($scope.books, function(book, key){
-		if (book._id == $routeParams.id){
-			$scope.book = book;
+	// Get the cocktail to edit with route params
+	angular.forEach($scope.cocktails, function(cocktail, key){
+		if (cocktail._id == $routeParams.id){
+			$scope.cocktail = cocktail;
 		}
 	});
-	$scope.textButton = "Edit book";
-	$scope.editBook = function(){
-		$http.put('/books/'+ $routeParams.id, $scope.book).success(function(result) {
-			$scope.book = result;
+	$scope.textButton = "Edit cocktail";
+	$scope.editCocktail = function(){
+		$http.put('/cocktails/'+ $routeParams.id, $scope.cocktail).success(function(result) {
+			$scope.cocktail = result;
 		}).error(function(error){
-			console.log('error updating book ' + $routeParams.id + ' :' + error);
+			console.log('error updating cocktail ' + $routeParams.id + ' :' + error);
 		});
 
 		$location.url("/");

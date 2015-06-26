@@ -1,20 +1,24 @@
-<!--If there is not any book to show, a message is displayed-->
+<!--If there is not any cocktail to show, a message is displayed-->
 <div class="container center-block">
-	<div ng-show="books.length == 0">
-		<h3 class="heading">There are not any available books</h3>
+	<div ng-show="cocktails.length == 0">
+		<h3 class="heading">There are not any available cocktails</h3>
 	</div>
 	<div class="table-responsive center-block">
 		<!--Text field 'searchText' that will serve to filter the results (we are going to use it in the filter attribute displayed below) -->
-		<!-- The results are only shown if there are books available -->
-		<input type="text" class="form-control search-text" ng-model="searchText" placeholder="Search..." ng-show="books.length > 0" />
-		<div class="row">
-			<div id="main-image" class="col-sm-12">
-				<img src="http://placehold.it/720x380">
+		<!-- The results are only shown if there are cocktails available -->
+		<input type="text" class="form-control search-text" ng-model="searchText" placeholder="Search..." ng-show="cocktails.length > 0" />
+
+		<div class="row" class="text-center" ng-repeat="cocktail in cocktails | filter: searchText">
+			<div id="thumbnail-image" class="col-xs-12 col-sm-6 col-md-4">
+				<img src="http://placehold.it/50x50">
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-8">
+				<h2>{{cocktail.name}}</h2>
+				<h4>Author:&nbsp;{{cocktail.author}}</h4>
 			</div>
 		</div>
-		<div class="row">
-			<div id="map-canvas" class="col-sm-12" maps-directive style="width: 500px;height: 400px;">
-			</div>
+		<!-- <div class="row">
+			<div id="map-canvas" class="col-sm-12" maps-directive></div>
 		</div>
 
 		<table class="table table-bordered table-hover table-condensed">
@@ -28,16 +32,19 @@
 				</tr>
 			</thead>
 			<tbody>
-				<!-- Our books have not the property id but we need this identifier to delete them. The way to do this is touring the array and adding the id key. On this way we can know which is the reference of the book and add, edit and remove books without having the identifier define. AngularJS will assign to each item an identifier autoincremental -->
-				<tr ng-repeat="book in books | filter: searchText">
-					<td><a href="#/info/{{book._id}}">{{book.name}}</a></td>
-					<td>{{book.author}}</td>
-					<td>{{book.theme}}</td>
-					<td><a href="#/edit/{{book._id}}" class="btn btn-default" role="button">Edit</a></td>
-					<td><a href="#/remove/{{book._id}}" class="btn btn-default" role="button">Remove</a></td>
+				Our cocktails have not the property id but we need this identifier to delete them. The way to do this is touring the array and adding the id key. On this way we can know which is the reference of the cocktail and add, edit and remove cocktails without having the identifier define. AngularJS will assign to each item an identifier autoincremental
+				<tr ng-repeat="cocktail in cocktails | filter: searchText">
+					<td><a href="#/info/{{cocktail._id}}">{{cocktail.name}}</a></td>
+					<td>{{cocktail.author}}</td>
+					<td>{{cocktail.description}}</td>
+					<td>{{cocktail.origin}}</td>
+					<td>{{cocktail.alcohol}}</td>
+					<td>{{cocktail.photo}}</td>
+					<td><a href="#/edit/{{cocktail._id}}" class="btn btn-default" role="button">Edit</a></td>
+					<td><a href="#/remove/{{cocktail._id}}" class="btn btn-default" role="button">Remove</a></td>
 				</tr>
 			</tbody>
-		</table>
-		<div> <a href="#/add/{{book.id}}" class="btn btn-primary add-book" role="button">Add</a></div>
+		</table> -->
+		<div> <a href="#/add/{{cocktail.id}}" class="btn btn-primary add-cocktail" role="button">Add</a></div>
 	</div>
 </div>
