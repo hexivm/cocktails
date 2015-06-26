@@ -31,3 +31,11 @@
 	width: 100%;
 	height: 300px;
 }
+
+.well.well-lg{
+	background-color: #222; 
+}
+
+li h3, .well p{
+	color: #FFF;
+}
