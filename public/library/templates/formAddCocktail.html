@@ -47,58 +47,19 @@
            </li>
           </ul>
         </div>
-<!--
-        <div class="row" class="text-center" ng-repeat="ingredients in cocktails">
-          
-            <div class="row">
-              <div class="col-md-2">Name</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="Name ingredient" ng-model="cocktail.ingredients.name"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">quantity</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="Quantity ingredient" ng-model="cocktail.ingredients.quantity"></div>
-            </div>
-          
-        </div>  
-        
 
-        <div class="row" class="text-center" ng-repeat="Steps in cocktails | filter: searchText">
-          
-            <div class="row">
-              <div class="col-md-2">step</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="step" ng-model="cocktail.steps.step"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">time</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="time" ng-model="cocktail.steps.time"></div>
-            </div>
-          
-        </div> 
+        <div><h3>Add Ingredients</h3></div>
 
+        <div ng-include="'library/templates/formIngredientsCocktail.html'"></div>
 
-        <div class="row" class="text-center" ng-repeat="comments in cocktails">
-          
-            <div class="row">
-              <div class="col-md-2">author</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="author" ng-model="cocktail.comments.author"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">rate</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="rate" ng-model="cocktail.coments.rate"></div>
-            </div>
-            <div class="row">
-              <div class="col-md-2">comment</div>
-              <div class="col-md-10">
-              <input type="text" class="form-control" placeholder="comment" ng-model="cocktail.coments.comment"></div>
-            </div>
-        </div> 
--->
+        <div><h3>Add Steps</h3></div>
+
+        <div ng-include="'library/templates/formStepCocktail.html'"></div>
+
+        <div><h3>Add Comment</h3></div>
+
+        <div ng-include="'library/templates/formCommentCocktail.html'"></div>                
+
 
         <button type="submit" class="btn btn-primary" style="float:right">{{ textButton }}</button>
       </fieldset>
